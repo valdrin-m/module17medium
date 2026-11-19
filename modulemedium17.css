@@ -1,0 +1,57 @@
+
+/* CSS background color variable */
+:root {
+    --item-bg: lightblue;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* CSS counters */
+ol {
+    counter-reset: my-counter;
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+li {
+    counter-increment: my-counter;
+    background-color: var(--item-bg);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/* Automatically number list items */
+li::before {
+    content: counter(my-counter) ". ";
+    font-weight: bold;
+    color: darkblue;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
